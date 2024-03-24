@@ -10,5 +10,4 @@ def get_driver():
         driver = "msedgedriver" + extension
         return webdriver.Edge(driver)
     else:
-        driver = "geckodriver" + extension
-        return webdriver.Firefox(driver)
+        return webdriver.Firefox()
