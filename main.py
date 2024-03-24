@@ -27,7 +27,8 @@ try:
             ipaddr = new_ipaddr
             requests.post(os.getenv("WEBHOOK_URL"), json={"content": f"New IP address from {router_type} router: {ipaddr}"})
         time.sleep(300) # Check every 5 minutes
+except Exception as e:
+    requests.post(os.getenv("WEBHOOK_URL"), json={"content": f"Error: {e}"})
 finally:
     router.stop()
     requests.post(os.getenv("WEBHOOK_URL"), json={"content": f"Stopping IP address scraper for {router_type} router"})
-    pass
