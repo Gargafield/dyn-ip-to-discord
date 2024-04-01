@@ -4,7 +4,7 @@ Monitor WAN IP address of your machine circumventing CGNAT and send an update to
 
 Implemented Routers:
 
-* AX3/AX3 pro
+* AX3
 
 ## Table of Contents
 
@@ -29,10 +29,9 @@ $ pip install -r requirements.txt
 
 To use this application, you need to configure the `.env` file with your specific settings. Here's a breakdown of what each setting does:
 
-- `ROUTER_TYPE`: This should be either `HUAWEI` or `ZYXEL`, depending on your router model.
+- `ROUTER_TYPE`: This should be one of the supported routers, for example `AX3`.
 - `WEBDRIVER`: This should be either `edge` or `firefox`, depending on which webdriver you want Selenium to use.
-- `HUAWEI_HOST`, `HUAWEI_USER`, `HUAWEI_PASSWORD`: These should be the IP address, username, and password for your Huawei router, respectively. Note that the username is always admin for AX3 routers.
-- `ZYXEL_HOST`, `ZYXEL_USER`, `ZYXEL_PASSWORD`: These should be the IP address, username, and password for your Zyxel router, respectively.
+- `ROUTER_HOST`, `ROUTER_USER`, `ROUTER_PASSWORD`: These should be the IP address, username, and password for your router, respectively. Note that the username isn't always supported by your routers.
 - `WEBHOOK_URL`: This should be the URL of the Discord webhook you want to send notifications to.
 
 Once you've configured your `.env` file, you can run the program with the following command:
