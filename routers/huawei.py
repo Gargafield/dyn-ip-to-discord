@@ -1,6 +1,5 @@
 # https://github.com/krlsedu/huawei-metrics/blob/master/services/Huawei.py
 
-import os
 import requests
 import time
 
