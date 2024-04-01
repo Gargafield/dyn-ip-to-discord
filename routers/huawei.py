@@ -17,21 +17,13 @@ HEADERS = {
 }
 
 class Ax3(Scraper):
-    def __init__(self, host=None, user=None, password=None):
+    def __init__(self, host: str, user: str, password: str):
 
         self.browser = None
         self.base_url = None
 
-        if host is None:
-            host = os.getenv('HUAWEI_HOST')
         self.host = host
-
-        if user is None:
-            user = os.getenv('HUAWEI_USER')
         self.user = user
-
-        if password is None:
-            password = os.getenv('HUAWEI_PASSWORD')
         self.password = password
 
         self.connect()

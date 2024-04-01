@@ -11,12 +11,6 @@ load_dotenv()
 router_type = os.getenv("ROUTER_TYPE").lower()
 router : Scraper = get_router(router_type)
 
-if router_type == "huawei":
-    from routers.huawei import Ax3
-    router = Ax3()
-elif router_type == "zyxel":
-    pass # TODO
-
 post_webhook(f"Starting IP address scraper for {router_type} router")
 
 ipaddr = None
